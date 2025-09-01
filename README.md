@@ -1,9 +1,10 @@
 # SPWM-Generator
 Using TI MSPM0 make SPWM wave
+
 ```mermaid
 graph TD
-    subgraph "MSPM0G Controller (SYSCLK 32 MHz)"
-        style "MSPM0G Controller (SYSCLK 32 MHz)" fill:#f0f8ff,stroke:#888,stroke-width:2px
+    subgraph MSPM0G_Controller ["MSPM0G Controller (SYSCLK 32 MHz)"]
+        style MSPM0G_Controller fill:#f0f8ff,stroke:#888,stroke-width:2px
 
         TIMA0["TIMA0<br>Periodic Timer (BUSCLK 4MHz)"]
         
