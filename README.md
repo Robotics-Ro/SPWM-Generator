@@ -2,8 +2,8 @@
 Using TI MSPM0 make SPWM wave
 ```mermaid
 graph TD
-    subgraph MSPM0G_Controller [MSPM0G Controller (SYSCLK 32 MHz)]
-        style MSPM0G_Controller fill:#f0f8ff,stroke:#888,stroke-width:2px
+    subgraph "MSPM0G Controller (SYSCLK 32 MHz)"
+        style "MSPM0G Controller (SYSCLK 32 MHz)" fill:#f0f8ff,stroke:#888,stroke-width:2px
 
         TIMA0["TIMA0<br>Periodic Timer (BUSCLK 4MHz)"]
         
@@ -51,6 +51,8 @@ graph TD
     GPIOB -- "6-channel PWM" --> DRV8300
     DRV8300 -- "Phase A, B, C Gate Drive" --> Motor
     
-    MSPM0G_Controller -- "EN_GATE (Enable)" --> DRV8300
-    DRV8300 -- "nFAULT (Fault)" --> MSPM0G_Controller
+    GPIOB -- "EN_GATE (Enable)" --> DRV8300
+    DRV8300 -- "nFAULT (Fault)" --> GPIOB
+
+
 ```
